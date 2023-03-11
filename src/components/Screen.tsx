@@ -1,10 +1,11 @@
 import React from 'react';
+import BlockContainer from './BlockContainer';
 
-const Screen = () => {
+const Screen = ({ type }: any) => {
   return (
-    <div className="block-container">
+    <BlockContainer id="screen" type={type}>
       <div className="screen-value">0</div>
-    </div>
+    </BlockContainer>
   );
 };
 

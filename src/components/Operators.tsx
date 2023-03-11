@@ -1,14 +1,15 @@
 import React from 'react';
+import BlockContainer from './BlockContainer';
 import Button from './Button';
 
-const Operators = () => {
+const Operators = ({ type }: any) => {
   const numbers = ['/', 'x', '-', '+'];
   return (
-    <div className="block-container">
+    <BlockContainer id="operators" type={type}>
       {numbers.map((item, index) => {
         return <Button value={item} key={index} className="button_operators" />;
       })}
-    </div>
+    </BlockContainer>
   );
 };
 

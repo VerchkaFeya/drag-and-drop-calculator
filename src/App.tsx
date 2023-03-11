@@ -1,4 +1,5 @@
 import React from 'react';
+import Canvas from './components/Canvas';
 import Mode from './components/Mode';
 import Numbers from './components/Numbers';
 import Operators from './components/Operators';
@@ -13,19 +14,12 @@ function App() {
         <Mode />
         <div className="main">
           <div className="sidebar">
-            <Screen />
-            <Operators />
-            <Numbers />
-            <ResultButton />
+            <Screen type="sidebar-type" />
+            <Operators type="sidebar-type" />
+            <Numbers type="sidebar-type" />
+            <ResultButton type="sidebar-type" />
           </div>
-          <div className="canvas canvas_empty">
-            <ImageIcon />
-            <p>
-              <span>Перетащите сюда</span>любой элемент
-              <br />
-              из левой панели
-            </p>
-          </div>
+          <Canvas />
         </div>
       </div>
     </>

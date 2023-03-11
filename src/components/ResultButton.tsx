@@ -1,11 +1,12 @@
 import React from 'react';
+import BlockContainer from './BlockContainer';
 import Button from './Button';
 
-const ResultButton = () => {
+const ResultButton = ({ type }: any) => {
   return (
-    <div className="block-container">
+    <BlockContainer id="result-button" type={type}>
       <Button value="=" className="button_equal" />
-    </div>
+    </BlockContainer>
   );
 };
 

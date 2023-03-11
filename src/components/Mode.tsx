@@ -11,7 +11,6 @@ const Mode = () => {
     dispatch(setMode(mode));
   };
 
-  console.log('mode', mode);
   return (
     <div className="mode">
       <label className={`option ${mode === 'runtime' ? 'active' : ''}`} htmlFor="runtime">

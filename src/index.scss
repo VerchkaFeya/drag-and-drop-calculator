@@ -103,8 +103,7 @@ html {
   }
 
   &.disabled {
-    // background-color: red;
-    cursor: default;
+    cursor: inherit;
   }
 }
 
@@ -116,7 +115,8 @@ html {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  color: #6b7280;
+  transition: 0.3s;
+
   text-transform: none;
   text-align: center;
   font-size: 12px;
@@ -132,6 +132,7 @@ html {
   }
 
   &_empty {
+    color: #6b7280;
     border: 2px dashed #c4c4c4;
     border-radius: 6px;
   }
