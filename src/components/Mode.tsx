@@ -1,19 +1,34 @@
 import React from 'react';
 import { ArrowsIcon, EyeIcon } from '../svg';
+import { useSelector, useDispatch } from 'react-redux';
+import { setMode } from '../redux/slices/modeSlice';
 
 const Mode = () => {
+  const mode = useSelector((state: any) => state.mode.value);
+  const dispatch = useDispatch();
+
+  const changeValue = (mode: string) => {
+    dispatch(setMode(mode));
+  };
+
+  console.log('mode', mode);
   return (
     <div className="mode">
-      <div className="option">
+      <label className={`option ${mode === 'runtime' ? 'active' : ''}`} htmlFor="runtime">
         <EyeIcon />
-        <input type="radio" id="runtime" name="mode" />
-        <label htmlFor="runtime">Runtime</label>
-      </div>
-      <div className="option active">
+        <input type="radio" id="runtime" name="mode" onChange={() => changeValue('runtime')} />
+        <p>Runtime</p>
+      </label>
+      <label className={`option ${mode === 'constructor' ? 'active' : ''}`} htmlFor="constructor">
         <ArrowsIcon />
-        <input type="radio" id="constructor" name="mode" checked />
-        <label htmlFor="constructor">Constructor</label>
-      </div>
+        <input
+          type="radio"
+          id="constructor"
+          name="mode"
+          onChange={() => changeValue('constructor')}
+        />
+        <p>Constructor</p>
+      </label>
     </div>
   );
 };

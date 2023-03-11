@@ -12,13 +12,13 @@ function App() {
       <div className="app">
         <Mode />
         <div className="main">
-          <div className="elements">
+          <div className="sidebar">
             <Screen />
             <Operators />
             <Numbers />
             <ResultButton />
           </div>
-          <div className="constructor constructor_empty">
+          <div className="canvas canvas_empty">
             <ImageIcon />
             <p>
               <span>Перетащите сюда</span>любой элемент

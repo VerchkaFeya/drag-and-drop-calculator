@@ -39,7 +39,7 @@ html {
   gap: 56px;
 }
 
-.elements {
+.sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,9 +101,14 @@ html {
     height: 64px;
     color: white;
   }
+
+  &.disabled {
+    // background-color: red;
+    cursor: default;
+  }
 }
 
-.constructor {
+.canvas {
   height: 100%;
   width: 100%;
   display: flex;
@@ -150,11 +155,14 @@ html {
   gap: 8px;
   text-transform: none;
   padding: 8px 12px;
+  border: 1px solid #f3f4f6;
+  background-color: #f3f4f6;
+  border-radius: 5px;
+  cursor: pointer;
 
   &.active {
-    border: 1px solid #e2e3e5;
+    border-color: #e2e3e5;
     background-color: white;
-    border-radius: 5px;
 
     svg {
       path {

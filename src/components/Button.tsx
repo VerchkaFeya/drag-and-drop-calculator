@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 type TValue = {
   value: string | number;
@@ -6,7 +7,11 @@ type TValue = {
 };
 
 const Button = ({ value, className }: TValue) => {
-  return <div className={`button ${className}`}>{value}</div>;
+  const mode = useSelector((state: any) => state.mode.value);
+
+  return (
+    <div className={`button ${className} ${mode === 'constructor' ? 'disabled' : ''}`}>{value}</div>
+  );
 };
 
 export default Button;
