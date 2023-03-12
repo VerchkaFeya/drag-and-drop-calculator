@@ -48,6 +48,10 @@ html {
   flex: 1 0 240px;
 }
 
+.sidebar.hidden > .block-container {
+  display: none;
+}
+
 .block-container {
   width: 100%;
   padding: 4px;
@@ -83,6 +87,11 @@ html {
   align-items: center;
   cursor: pointer;
   justify-content: center;
+  transition: 0.1s;
+
+  &:hover {
+    border: 2px solid #5d5fef;
+  }
 
   &_operators {
     width: calc((100% - 24px) / 4);
@@ -104,6 +113,10 @@ html {
 
   &.disabled {
     cursor: inherit;
+
+    &:hover {
+      border: 1px solid #e2e3e5;
+    }
   }
 }
 
@@ -113,7 +126,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+
   gap: 12px;
   transition: 0.3s;
 
@@ -135,6 +149,7 @@ html {
     color: #6b7280;
     border: 2px dashed #c4c4c4;
     border-radius: 6px;
+    justify-content: center;
   }
 }
 

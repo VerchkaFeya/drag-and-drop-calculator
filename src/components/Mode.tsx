@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowsIcon, EyeIcon } from '../svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { setMode } from '../redux/slices/modeSlice';
+import { resetCalculator } from '../redux/slices/calculatorSlice';
 
 const Mode = () => {
   const mode = useSelector((state: any) => state.mode.value);
@@ -9,6 +10,7 @@ const Mode = () => {
 
   const changeValue = (mode: string) => {
     dispatch(setMode(mode));
+    dispatch(resetCalculator());
   };
 
   return (
