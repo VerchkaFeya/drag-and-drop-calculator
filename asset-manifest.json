@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/drag-and-drop-calculator/static/css/main.814480cf.css",
+    "main.js": "/drag-and-drop-calculator/static/js/main.c9f2a355.js",
+    "static/media/image.svg": "/drag-and-drop-calculator/static/media/image.7ceecf6a868baded8dc04648cebe55c3.svg",
+    "static/media/eye.svg": "/drag-and-drop-calculator/static/media/eye.6dc1f4abff9a7df46cef7fd30e3926d9.svg",
+    "index.html": "/drag-and-drop-calculator/index.html",
+    "static/media/arrows.svg": "/drag-and-drop-calculator/static/media/arrows.4d18d19ec08159456bc10a500f1e2130.svg",
+    "main.814480cf.css.map": "/drag-and-drop-calculator/static/css/main.814480cf.css.map",
+    "main.c9f2a355.js.map": "/drag-and-drop-calculator/static/js/main.c9f2a355.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.814480cf.css",
+    "static/js/main.c9f2a355.js"
+  ]
+}
